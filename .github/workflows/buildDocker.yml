@@ -10,3 +10,4 @@ jobs:
       - name: Push to Docker Hub
         run: |
           docker build -t  pnp-powershell .
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
