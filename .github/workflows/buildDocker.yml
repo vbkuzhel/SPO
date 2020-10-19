@@ -11,3 +11,5 @@ jobs:
         run: |
           docker build -t  pnp-powershell .
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker tag pnp-powershell kuzhel/pnp-powershell:windows-latest
+          docker push kuzhel/pnp-powershell:windows-latest
