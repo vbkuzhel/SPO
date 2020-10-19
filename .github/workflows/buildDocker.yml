@@ -10,3 +10,4 @@ jobs:
       - name: Push to Docker Hub
         run: |
           ls
+          docker build -t  pnp-powershell .
