@@ -1,7 +1,5 @@
-FROM mcr.microsoft.com/powershell:lts-nanoserver-1809
+FROM mcr.microsoft.com/powershell:lts-windowsservercore-1809
 SHELL ["pwsh","-command"]
 USER ContainerAdministrator
-#RUN Set-psrepository PSGallery -InstallationPolicy Trusted 
-RUN Install-Module SharePointPnPPowerShellOnline -SkipPublisherCheck
-# -Scope AllUsers
+RUN Set-psrepository PSGallery -InstallationPolicy Trusted && Install-Module SharePointPnPPowerShellOnline -SkipPublisherCheck -Scope AllUsers
 CMD [ "pwsh" ]
