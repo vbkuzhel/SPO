@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/powershell:preview
+FROM mcr.microsoft.com/powershell:latest
 SHELL ["pwsh","-command"]
 USER ContainerAdministrator
 RUN Set-psrepository PSGallery -InstallationPolicy Trusted 
