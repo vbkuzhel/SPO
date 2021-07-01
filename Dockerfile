@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/powershell:lts-windowsservercore-1809
+FROM mcr.microsoft.com/powershell:preview
 SHELL ["pwsh","-command"]
 USER ContainerAdministrator
 RUN Set-psrepository PSGallery -InstallationPolicy Trusted 
